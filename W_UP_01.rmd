@@ -30,6 +30,8 @@ $H_A$: The average number of pushups done by line players is statistically diffe
 # Methods
 
 <!--Decide on your methods: use "variable analysis" or other appropriate descriptors. Make sure to choose at least one graphical method and at least one numerical method.!-->
+Position is a categorical variable. Number of push-ups in a numerical variable. I will do an analysis that explains the number of push-ups a team mate can do based on their position.   
+
 
 # Results
 
@@ -40,10 +42,24 @@ $H_A$: The average number of pushups done by line players is statistically diffe
 ### Graphical Descriptive Results
 
 <!--Graphical results here. Make sure to show your code. Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too. Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+```{r}
+boxplot(pushups~position,data=mydata)
+```
+
+The average number of push ups on the positions line of the graph is different. It looks like more guys in the skill position are able to do more push ups than those in the line position.  
+
 
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+favstats(pushups~position,data=mydata)
+```
+The median for both positions is way different. It appears the median for the skill position is much higher than that of the line position. The maximum amount of pushups done by those in the skill position is 108 while the maximum for those in the line position are 34. Which leads me to believe that those in the skill position are more capable of executing a larger amount of push ups.
+
+
+
 
 ## Inferential Results
 
